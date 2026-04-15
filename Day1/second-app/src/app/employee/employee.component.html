@@ -1,0 +1,17 @@
+<p>employee works!</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Date of Joining</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of emps">
+            <td>{{e.eid}}</td>
+            <td>{{e.ename}}</td>
+            <td>{{e.esalary}}</td>
+            <td>{{e.edoj}}</td>
+        </tr>
+    </tbody>
+</table>

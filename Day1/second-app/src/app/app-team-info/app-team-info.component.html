@@ -1,0 +1,17 @@
+<p>app-team-info works!</p>
+<table class="team-table">
+    <thead>
+        <th>tid</th>
+        <th>tname</th>
+        <th>tlogo</th>
+        <th>tslogan</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of teams">
+            <td>{{t.tid}}</td>
+            <td>{{t.tname}}</td>
+            <td><img [src]="t.tlogo" alt="team logo" height="300"></td>
+            <td>{{t.tslogan}}</td>
+        </tr>
+    </tbody>
+</table>

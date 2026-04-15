@@ -1,0 +1,11 @@
+.team-table {
+	width: 100%;
+	border: 2px solid #000;
+	border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+	border: 1px solid #000;
+	padding: 8px;
+}
