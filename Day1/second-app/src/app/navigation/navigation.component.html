@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
   <a class="navbar-brand" routerLink="/">Our App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" routerLink="student">Student <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -16,6 +16,30 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="routing">Routing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pipe">Pipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="product">product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="emplist">emplist</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="cust1" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Custom One</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="cust2" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Custom Two</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="apipe" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">AsyncPipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="srv" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">ServiceExample</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="productwork" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">ProductWork</a>
       </li>
     </ul>
   </div>

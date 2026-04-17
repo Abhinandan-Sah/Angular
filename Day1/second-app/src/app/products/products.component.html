@@ -1,0 +1,21 @@
+<h1>Product Table</h1>
+<Table class="table">
+  <thead>
+    <tr>
+      <th>Product Id</th>
+      <th>ProductName</th>
+      <th>Price</th>
+      <th>MfgDate</th>
+      <th>ExpDate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.id }}</td>
+      <td>{{ p.ProductName | uppercase }}</td>
+      <td>{{ p.Price | currency: "INR" }}</td>
+      <td>{{ p.MfgDate | date: "MMM d yyyy" }}</td>
+      <td>{{ p.ExpDate | date: "fullDate" }}</td>
+    </tr>
+  </tbody>
+</Table>

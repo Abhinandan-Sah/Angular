@@ -1,0 +1,10 @@
+<div *ngIf="employee">
+  <h2>Employee Details</h2>
+  <p><strong>ID:</strong> {{ employee.eid }}</p>
+  <p><strong>Name:</strong> {{ employee.ename }}</p>
+  <p><strong>Salary:</strong> {{ employee.esalary | currency: 'INR' }}</p>
+  <p><strong>Date of Joining:</strong> {{ employee.edoj }}</p>
+</div>
+<div *ngIf="!employee">
+  <p>Employee not found</p>
+</div>
