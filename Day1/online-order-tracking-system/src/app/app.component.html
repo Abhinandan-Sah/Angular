@@ -1,0 +1,18 @@
+<main class="shell">
+  <header class="hero-bar">
+    <div>
+      <p class="eyebrow">Angular 17 assignment</p>
+      <h1>{{ title }}</h1>
+      <p class="subtext">Track order progress, inspect formatted dates and prices, and translate status codes with a custom pipe.</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Orders</a>
+    </nav>
+  </header>
+
+  <section class="content-panel">
+    <router-outlet></router-outlet>
+  </section>
+</main>

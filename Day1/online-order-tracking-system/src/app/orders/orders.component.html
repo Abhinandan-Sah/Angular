@@ -1,0 +1,38 @@
+<section class="orders-page">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Orders</p>
+      <h2>Order list</h2>
+    </div>
+    <p class="section-copy">Prices are formatted with the built-in currency pipe, dates use the built-in date pipe, and order status codes are translated by the custom <strong>orderStatus</strong> pipe.</p>
+  </div>
+
+  <div class="orders-grid">
+    <article class="order-card" *ngFor="let order of orders">
+      <div class="order-top">
+        <div>
+          <span class="label">Order #{{ order.id }}</span>
+          <h3>{{ order.product }}</h3>
+        </div>
+        <span class="status" [attr.data-status]="order.status">{{ order.status | orderStatus }}</span>
+      </div>
+
+      <dl>
+        <div>
+          <dt>Customer</dt>
+          <dd>{{ order.customer }}</dd>
+        </div>
+        <div>
+          <dt>Price</dt>
+          <dd>{{ order.price | currency:'INR':'symbol':'1.0-0' }}</dd>
+        </div>
+        <div>
+          <dt>Ordered on</dt>
+          <dd>{{ order.orderedOn | date:'mediumDate' }}</dd>
+        </div>
+      </dl>
+
+      <p class="status-line">Status: {{ order.status | orderStatus }}</p>
+    </article>
+  </div>
+</section>

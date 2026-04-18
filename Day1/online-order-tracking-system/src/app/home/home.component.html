@@ -1,0 +1,13 @@
+<section class="hero">
+  <div>
+    <p class="eyebrow">Welcome page</p>
+    <h2>Order tracking made simple</h2>
+    <p class="lead">Use the navigation above to switch between the welcome screen and the order list. The app shows formatted dates and prices and converts delivery status codes into readable text.</p>
+  </div>
+
+  <div class="card-stack">
+    <article class="card" *ngFor="let item of highlights">
+      {{ item }}
+    </article>
+  </div>
+</section>

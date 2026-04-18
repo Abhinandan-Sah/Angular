@@ -1,0 +1,36 @@
+/* Global shell styles for the order tracking app */
+:root {
+  color-scheme: light;
+  --bg: #f4efe7;
+  --bg-accent: #e2e8f0;
+  --ink: #132238;
+  --muted: #5b6472;
+  --panel: rgba(255, 255, 255, 0.82);
+  --border: rgba(19, 34, 56, 0.12);
+  --brand: #163d6b;
+  --brand-2: #d97706;
+  --success: #0f766e;
+  --shadow: 0 24px 60px rgba(19, 34, 56, 0.12);
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(217, 119, 6, 0.18), transparent 28%),
+    radial-gradient(circle at right top, rgba(22, 61, 107, 0.14), transparent 24%),
+    linear-gradient(180deg, #fff9f1 0%, var(--bg) 48%, #eef2f7 100%);
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
