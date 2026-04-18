@@ -1,18 +1,23 @@
-<main class="shell">
-  <header class="hero-bar">
-    <div>
-      <p class="eyebrow">Angular 17 assignment</p>
-      <h1>{{ title }}</h1>
-      <p class="subtext">Track order progress, inspect formatted dates and prices, and translate status codes with a custom pipe.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">{{ title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Orders</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <nav class="nav-pills">
-      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Orders</a>
-    </nav>
-  </header>
-
-  <section class="content-panel">
-    <router-outlet></router-outlet>
-  </section>
+<main class="container py-4">
+  <router-outlet></router-outlet>
 </main>

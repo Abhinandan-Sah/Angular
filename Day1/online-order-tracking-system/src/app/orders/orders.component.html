@@ -1,38 +1,29 @@
-<section class="orders-page">
-  <div class="section-head">
-    <div>
-      <p class="eyebrow">Orders</p>
-      <h2>Order list</h2>
-    </div>
-    <p class="section-copy">Prices are formatted with the built-in currency pipe, dates use the built-in date pipe, and order status codes are translated by the custom <strong>orderStatus</strong> pipe.</p>
-  </div>
+<section>
+  <h2 class="h4 mb-3">Orders</h2>
+  <p class="mb-3">This page shows all orders in a simple table.</p>
 
-  <div class="orders-grid">
-    <article class="order-card" *ngFor="let order of orders">
-      <div class="order-top">
-        <div>
-          <span class="label">Order #{{ order.id }}</span>
-          <h3>{{ order.product }}</h3>
-        </div>
-        <span class="status" [attr.data-status]="order.status">{{ order.status | orderStatus }}</span>
-      </div>
-
-      <dl>
-        <div>
-          <dt>Customer</dt>
-          <dd>{{ order.customer }}</dd>
-        </div>
-        <div>
-          <dt>Price</dt>
-          <dd>{{ order.price | currency:'INR':'symbol':'1.0-0' }}</dd>
-        </div>
-        <div>
-          <dt>Ordered on</dt>
-          <dd>{{ order.orderedOn | date:'mediumDate' }}</dd>
-        </div>
-      </dl>
-
-      <p class="status-line">Status: {{ order.status | orderStatus }}</p>
-    </article>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>Order Id</th>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.customer }}</td>
+          <td>{{ order.product }}</td>
+          <td>{{ order.price | currency:'INR' }}</td>
+          <td>{{ order.orderedOn | date:'mediumDate' }}</td>
+          <td>{{ order.status | orderStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>

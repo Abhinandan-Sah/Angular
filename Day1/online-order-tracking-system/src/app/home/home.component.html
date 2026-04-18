@@ -1,13 +1,15 @@
-<section class="hero">
-  <div>
-    <p class="eyebrow">Welcome page</p>
-    <h2>Order tracking made simple</h2>
-    <p class="lead">Use the navigation above to switch between the welcome screen and the order list. The app shows formatted dates and prices and converts delivery status codes into readable text.</p>
-  </div>
+<section>
+  <div class="card">
+    <div class="card-body">
+      <h2 class="h4 mb-3">Welcome</h2>
+      <p class="mb-3">This is the home page for the online order tracking system.</p>
+      <p class="mb-3">Use the Orders page to view the list of orders with formatted price, date, and delivery status.</p>
 
-  <div class="card-stack">
-    <article class="card" *ngFor="let item of highlights">
-      {{ item }}
-    </article>
+      <ul class="mb-4">
+        <li *ngFor="let item of highlights">{{ item }}</li>
+      </ul>
+
+      <a routerLink="/orders" class="btn btn-primary">Go to Orders</a>
+    </div>
   </div>
 </section>
