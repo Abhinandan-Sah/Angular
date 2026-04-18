@@ -1,29 +1,49 @@
-<section>
-  <h2 class="h4 mb-3">Orders</h2>
-  <p class="mb-3">This page shows all orders in a simple table.</p>
+<section class="orders-wrap">
+  <div class="card shadow-sm border-0">
+    <div class="card-body">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+        <h2 class="h4 mb-0">Orders</h2>
+        <span class="badge bg-primary-subtle text-primary-emphasis">{{ orders.length }} total orders</span>
+      </div>
 
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead class="table-light">
-        <tr>
-          <th>Order Id</th>
-          <th>Customer</th>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Date</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let order of orders">
-          <td>{{ order.id }}</td>
-          <td>{{ order.customer }}</td>
-          <td>{{ order.product }}</td>
-          <td>{{ order.price | currency:'INR' }}</td>
-          <td>{{ order.orderedOn | date:'mediumDate' }}</td>
-          <td>{{ order.status | orderStatus }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <p class="text-secondary mb-3">Prices and dates use built-in pipes. Status uses the custom orderStatus pipe.</p>
+
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Order Id</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of orders">
+              <td class="fw-semibold">{{ order.id }}</td>
+              <td>{{ order.customer }}</td>
+              <td>{{ order.product }}</td>
+              <td>{{ order.price | currency:'INR' }}</td>
+              <td>{{ order.orderedOn | date:'mediumDate' }}</td>
+              <td>
+                <span
+                  class="badge"
+                  [ngClass]="{
+                    'text-bg-secondary': order.status === 'P',
+                    'text-bg-info': order.status === 'S',
+                    'text-bg-success': order.status === 'D',
+                    'text-bg-danger': order.status === 'C'
+                  }"
+                >
+                  {{ order.status | orderStatus }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>

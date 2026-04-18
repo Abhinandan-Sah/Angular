@@ -2,3 +2,7 @@ section {
   max-width: 960px;
   margin: 0 auto;
 }
+
+.orders-wrap .card {
+  border-radius: 0.75rem;
+}
