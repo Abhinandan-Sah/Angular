@@ -1,0 +1,32 @@
+<h2 class="section-title">Courses</h2>
+
+<div class="table-wrap">
+  <table class="course-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Instructor</th>
+        <th>Duration</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (course of courses; track course.id) {
+        <tr>
+          <td>{{ course.id }}</td>
+          <td>{{ course.title }}</td>
+          <td>{{ course.instructor }}</td>
+          <td>{{ course.duration }} h</td>
+          <td>
+            <button type="button" class="delete-btn" (click)="onDelete(course.id)">Delete</button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5" class="empty-row">No courses available.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

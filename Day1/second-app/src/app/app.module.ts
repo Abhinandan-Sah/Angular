@@ -23,6 +23,8 @@ import { ServiceExampleComponent } from './service-example/service-example.compo
 import { ProductShowcaseComponent } from './product-showcase/product-showcase.component';
 import { DisplayComponent } from './product/display/display.component';
 import { RegisterComponent } from './product/register/register.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { RegisterComponent } from './product/register/register.component';
     Cust2Component,
     HomeComponent,
     CubePipe, 
-    DataPipe, ServiceExampleComponent, ProductShowcaseComponent, DisplayComponent, RegisterComponent
+    DataPipe, ServiceExampleComponent, ProductShowcaseComponent, DisplayComponent, RegisterComponent, DataSharingComponent, LoginComponent
   ],
   imports: [
     BrowserModule,

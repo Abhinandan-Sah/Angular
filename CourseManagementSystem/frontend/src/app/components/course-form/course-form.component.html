@@ -1,0 +1,14 @@
+<h2 class="section-title">Create New Course</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()" class="course-form">
+  <label class="field-label" for="title">Title</label>
+  <input id="title" class="field-input" type="text" formControlName="title" placeholder="Advanced Angular" />
+
+  <label class="field-label" for="instructor">Instructor</label>
+  <input id="instructor" class="field-input" type="text" formControlName="instructor" placeholder="Jamie Carter" />
+
+  <label class="field-label" for="duration">Duration (hours)</label>
+  <input id="duration" class="field-input" type="number" min="1" formControlName="duration" />
+
+  <button class="create-btn" type="submit">CREATE COURSE</button>
+</form>

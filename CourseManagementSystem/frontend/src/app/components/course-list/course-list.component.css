@@ -1,0 +1,63 @@
+.section-title {
+  margin: 0 0 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #113253;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #cde4ee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.course-table thead tr {
+  background: linear-gradient(135deg, #0ab4c6, #138fb3);
+}
+
+.course-table th {
+  text-align: left;
+  color: #f4fdff;
+  padding: 0.65rem 0.7rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.course-table td {
+  padding: 0.62rem 0.7rem;
+  border-top: 1px solid #e2edf4;
+  color: #1a3d53;
+  font-size: 0.9rem;
+}
+
+.course-table tbody tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.delete-btn {
+  border: none;
+  background: #f35e52;
+  color: #ffffff;
+  padding: 0.42rem 0.56rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.delete-btn:hover {
+  background: #e14539;
+}
+
+.empty-row {
+  text-align: center;
+  color: #6f8796;
+  font-style: italic;
+}

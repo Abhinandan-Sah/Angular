@@ -1,0 +1,105 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	color: #0e2a3a;
+	font-family: "Manrope", "Segoe UI", Tahoma, sans-serif;
+}
+
+.app-shell {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at 15% -10%, rgba(71, 206, 216, 0.35), transparent 45%),
+		radial-gradient(circle at 95% 20%, rgba(10, 71, 130, 0.25), transparent 40%),
+		#ecf3f8;
+}
+
+.hero-header {
+	background: linear-gradient(135deg, #0a1e3e, #122d56 70%);
+	color: #f4faff;
+	padding: 1.2rem 2rem 1.6rem;
+	border-bottom: 4px solid #0fcad9;
+	box-shadow: 0 10px 24px rgba(8, 24, 49, 0.35);
+}
+
+.trainer-block {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+
+.avatar {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	background: linear-gradient(150deg, #37d6e0, #2ca8ca);
+	color: #042835;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+.trainer-meta {
+	display: grid;
+}
+
+.trainer-label {
+	font-size: 0.72rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: #8ad7f7;
+}
+
+.trainer-name {
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+
+.dashboard-title {
+	margin: 1rem 0 0;
+	text-align: center;
+	letter-spacing: 0.08em;
+	font-size: clamp(1.1rem, 3.2vw, 2rem);
+	font-weight: 800;
+}
+
+.dashboard-content {
+	width: min(1120px, 92vw);
+	margin: 1.4rem auto 2rem;
+	display: grid;
+	gap: 1rem;
+}
+
+.card {
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 1.1rem;
+	border: 1px solid #d7e4ee;
+	box-shadow: 0 10px 26px rgba(8, 43, 63, 0.08);
+}
+
+.status-banner {
+	border-radius: 10px;
+	padding: 0.8rem 1rem;
+	font-weight: 600;
+}
+
+.status-banner.error {
+	background: #fff0ed;
+	color: #a63b17;
+	border: 1px solid #f5b09a;
+}
+
+.status-banner.loading {
+	background: #e7faff;
+	color: #0f6073;
+	border: 1px solid #94deef;
+}
+
+@media (min-width: 900px) {
+	.dashboard-content {
+		grid-template-columns: 360px 1fr;
+		align-items: start;
+	}
+}
+

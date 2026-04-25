@@ -1,0 +1,31 @@
+<div class="app-shell">
+  <header class="hero-header">
+    <div class="trainer-block" aria-label="Trainer profile">
+      <div class="avatar">AR</div>
+      <div class="trainer-meta">
+        <span class="trainer-label">Trainer</span>
+        <span class="trainer-name">{{ trainerName }}</span>
+      </div>
+    </div>
+
+    <h1 class="dashboard-title">{{ title }}</h1>
+  </header>
+
+  <main class="dashboard-content">
+    @if (errorMessage) {
+      <div class="status-banner error">{{ errorMessage }}</div>
+    }
+
+    @if (isLoading) {
+      <div class="status-banner loading">Loading courses...</div>
+    }
+
+    <section class="card form-card">
+      <app-course-form (courseCreate)="onCreateCourse($event)"></app-course-form>
+    </section>
+
+    <section class="card list-card">
+      <app-course-list [courses]="courses" (courseDelete)="onDeleteCourse($event)"></app-course-list>
+    </section>
+  </main>
+</div>
